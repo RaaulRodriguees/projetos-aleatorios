@@ -1,0 +1,58 @@
+import random
+
+# palavras para o jogo da forca
+palavras = ['orangotango', 'banana', 'laranja', 'manga', 'uva', 'limao']
+
+# escolher uma palavra aleatória da lista de palavras
+palavra = random.choice(palavras)
+
+# lista para armazenar letras adivinhadas
+letras_adivinhadas = []
+
+# número de tentativas permitidas
+tentativas = 6
+
+# loop do jogo
+while tentativas > 0:
+    # número de letras que faltam adivinhar
+    faltando = 0
+
+    # mostrar as letras já adivinhadas e preencher os espaços em branco com "_"
+    for letra in palavra:
+        if letra in letras_adivinhadas:
+            print(letra, end=' ')
+        else:
+            print("_", end=' ')
+            faltando += 1
+
+    # verificar se todas as letras foram adivinhadas
+    if faltando == 0:
+        print("\nVocê ganhou!")
+        break
+
+    # pedir ao jogador para adivinhar uma letra
+    palpite = input("\nDigite uma letra: ").lower()
+
+    # verificar se o palpite é uma letra única
+    if len(palpite) != 1:
+        print("Por favor, digite apenas uma letra!")
+        continue
+
+    # verificar se o palpite já foi feito antes
+    if palpite in letras_adivinhadas:
+        print("Você já tentou essa letra!")
+        continue
+
+    # adicionar a letra à lista de letras adivinhadas
+    letras_adivinhadas.append(palpite)
+
+    # verificar se o palpite está na palavra
+    if palpite not in palavra:
+        print("Errou!")
+        tentativas -= 1
+
+    # mostrar o número de tentativas restantes
+    print("Tentativas restantes: ", tentativas)
+
+# mostrar a palavra correta
+print("A palavra era:", palavra)
