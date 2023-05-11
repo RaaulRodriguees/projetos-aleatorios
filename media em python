@@ -1,0 +1,39 @@
+from binascii import a2b_qp
+
+print('Boletim escolar 2023\n')
+
+
+
+a = int(input('Digite sua primeira nota: \n'))
+while a > 10:
+        int(input('Porfavor digite uma nota maior que 10: \n'))
+while a < 0:
+    int(input('Porfavor digite uma nota maior que 0: \n'))
+
+
+b = int(input('Digite sua segunda nota: \n'))
+while b > 10:
+        int(input('Porfavor digite uma nota maior que 10: \n'))
+while b < 0:
+    int(input('Porfavor digite uma nota maior que 0: \n'))
+
+
+c = int(input('Digite sua terceira nota: \n'))
+while c > 10:
+        int(input('Porfavor digite uma nota maior que 10: \n'))
+while c < 0:
+    int(input('Porfavor digite uma nota maior que 0: \n'))
+
+d = int(input('Digite sua quarta nota: \n'))
+while d > 10:
+        int(input('Porfavor digite uma nota maior que 10: \n'))
+while d < 0:
+    int(input('Porfavor digite uma nota maior que 0: \n'))
+
+
+media = (a+b+c+d)/4
+print('\nSua média é: {}\n'.format(media))
+if media >=6:
+    print('Você passou!')
+else:
+    print('Você não passou!')
