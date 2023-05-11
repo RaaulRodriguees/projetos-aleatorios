@@ -1,0 +1,87 @@
+import random
+
+perguntar = int(input('''Escolha uma opcao para se jogar: 
+
+[1] Pedra
+[2] Papel
+[3] Tesoura
+[4] Lagarto
+[5] Spock
+
+Digite sua escolha: '''))
+computador = random.randint(1, 5)
+
+if computador == 1:
+    print('O computador escolheu: Pedra')
+    if perguntar == 1:
+        print("Empate!")
+    elif perguntar == 2:
+        print("Jogador venceu")
+    elif perguntar == 3:
+        print("Computador venceu")
+    elif perguntar == 4:
+        print("Computador venceu")
+    elif perguntar == 5:
+        print("Jogador venceu")
+    else:
+        print("Operacao invalida")
+
+elif computador == 2:
+    print('O computador escolheu: Papel')
+    if perguntar == 1:
+        print("Computador venceu")
+    elif perguntar == 2:
+        print("Empate!")
+    elif perguntar == 3:
+        print("Jogador venceu")
+    elif perguntar == 4:
+        print("Jogador venceu")
+    elif perguntar == 5:
+        print("Computador venceu")
+    else:
+        print("Operacao invalida")
+
+elif computador == 3:
+    print('O computador escolheu: Tesoura')
+    if perguntar == 1:
+        print("Jogador venceu")
+    elif perguntar == 2:
+        print("Computador venceu")
+    elif perguntar == 3:
+        print("Empate!")
+    elif perguntar == 4:
+        print("Computador venceu")
+    elif perguntar == 5:
+        print("Jogador venceu")
+    else:
+        print("Operacao invalida")
+
+elif computador == 4:
+    print('O computador escolheu: Lagarto')
+    if perguntar == 1:
+        print("Jogador venceu")
+    elif perguntar == 2:
+        print("Computador venceu")
+    elif perguntar == 3:
+        print("Jogador venceu")
+    elif perguntar == 4:
+        print("Empate!")
+    elif perguntar == 5:
+        print("Computador venceu")
+    else:
+        print("Operacao invalida")
+
+elif computador == 5:
+    print('O computador escolheu: Spock')
+    if perguntar == 1:
+        print("Computador venceu")
+    elif perguntar == 2:
+        print("Jogador venceu")
+    elif perguntar == 3:
+        print("Computador venceu")
+    elif perguntar == 4:
+        print("Jogador venceu")
+    elif perguntar == 5:
+        print("Empate!")
+    else:
+        print("Operacao invalida")
